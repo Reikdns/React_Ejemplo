@@ -1,8 +1,13 @@
 import { useState } from "react";
+import './page_1.css'
 
 export default function Page_1() {
   const [data, setData] = useState([
     {nombre:"rei"},
+    {nombre:"feli"},
+    {nombre:"feli"},
+    {nombre:"feli"},
+    {nombre:"feli"},
     {nombre:"feli"}
   ])
 
@@ -10,8 +15,8 @@ export default function Page_1() {
   return (
     <div id="contenedorPrincipal">
       <section id="seccionDatos">
-        <table className="table" id="tablaDatos">
-          <thead className="thead-dark">
+        <table id="tablaDatos">
+          <thead>
             <tr>
               <th>Nombre</th>
               <th>Identificacion</th>
@@ -26,6 +31,11 @@ export default function Page_1() {
               data.map(item => 
                 <tr key={item.nombre}>
                   <td>{item.nombre}</td>
+                  <td>1234</td>
+                  <td>1234</td>
+                  <td>1234</td>
+                  <td>1234</td>
+                  <td>1234</td>
                 </tr>
                 )
             }

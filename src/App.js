@@ -3,7 +3,6 @@ import './App.css';
 import Nav from './components/nav/nav';
 import { useState } from 'react';
 import Container from './components/container/container';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

@@ -1,0 +1,29 @@
+table{
+    width: 100%;
+    height: 100%;
+}
+
+tr td{
+    border: 2px black solid;
+    border-radius: 10px;
+    background: rgb(228, 228, 228);
+}
+
+tr th{
+    border: 1px red solid;
+    border-radius: 10px;
+    background: red;
+    color: white;
+}
+
+#contenedorPrincipal{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccionDatos{
+    margin-top: 5%;
+    width: 80%;
+}
