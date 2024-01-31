@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import _obtenerEstudiantes from "../../services/estudiante-service";
 import './page_1.css'
 
 export default function Page_1() {
-  const [data, setData] = useState([
-    {nombre:"rei"},
-    {nombre:"feli"},
-    {nombre:"feli"},
-    {nombre:"feli"},
-    {nombre:"feli"},
-    {nombre:"feli"}
-  ])
+  const [data, setData] = useState([])
 
+  useEffect( () => {
+    obtenerEstudiantes()
+  }, [])
+  
+  function obtenerEstudiantes(){
+    _obtenerEstudiantes().then(estudiantes => {
+      setData(estudiantes)
+    })
+    
+  }
 
   return (
     <div id="contenedorPrincipal">
@@ -31,11 +35,11 @@ export default function Page_1() {
               data.map(item => 
                 <tr key={item.nombre}>
                   <td>{item.nombre}</td>
-                  <td>1234</td>
-                  <td>1234</td>
-                  <td>1234</td>
-                  <td>1234</td>
-                  <td>1234</td>
+                  <td>{item.identificacion}</td>
+                  <td>{item.fecha_nacimiento}</td>
+                  <td>{item.fecha_ingreso}</td>
+                  <td>{item.sexo}</td>
+                  <td>{(item.notas.reduce((a,b) => a + b, 0)/item.notas.length).toFixed(2)}</td>
                 </tr>
                 )
             }

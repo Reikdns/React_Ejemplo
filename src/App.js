@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Container from './components/container/container';
 
 function App() {
-
   const [option, setOption] = useState(0)
 
   return (
