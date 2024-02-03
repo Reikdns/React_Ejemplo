@@ -1,7 +1,7 @@
 import './nav.css'
 
 
-export default function Nav({option, setOption}){
+export default function Nav({setOption}){
 
     function cambiarPagina(pagina){
         setOption(pagina)
@@ -19,8 +19,8 @@ export default function Nav({option, setOption}){
                     </div>
                     <div className="navSection">
                         <ul>
-                            <li onClick={() => cambiarPagina(0)}>Page 1</li>
-                            <li onClick={() => cambiarPagina(1)}>Page 2</li>
+                            <li onClick={() => cambiarPagina(0)}>Ver</li>
+                            <li onClick={() => cambiarPagina(1)}>Guardar</li>
                             <li onClick={() => cambiarPagina(2)}>Page 3</li>
                         </ul>
                     </div>

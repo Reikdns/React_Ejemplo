@@ -6,11 +6,11 @@ export default function _obtenerEstudiantes(){
     .then(response => response.json())
 }
 
-export function _guardarEstudiante(){
+export function _guardarEstudiante(estudiante){
     return fetch(apiBase + "/guardar_estudiante", {
         method: 'POST',
-        headers: 'Content-Type: application/json',
-        body: {}
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(estudiante)
     })
     .then(response => response.json())
 }
